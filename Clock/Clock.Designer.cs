@@ -34,6 +34,8 @@
             AuthorButton = new Button();
             ClockToolTip = new ToolTip(components);
             ClockTimer = new System.Windows.Forms.Timer(components);
+            ClockBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)ClockBox).BeginInit();
             SuspendLayout();
             // 
             // SettingsButton
@@ -50,6 +52,7 @@
             SettingsButton.TabIndex = 0;
             ClockToolTip.SetToolTip(SettingsButton, "Settings menu");
             SettingsButton.UseVisualStyleBackColor = false;
+            SettingsButton.Click += SettingsButton_Click;
             // 
             // AuthorButton
             // 
@@ -71,12 +74,21 @@
             // 
             ClockTimer.Tick += ClockTimer_Tick;
             // 
+            // ClockBox
+            // 
+            ClockBox.Location = new Point(92, 47);
+            ClockBox.Name = "ClockBox";
+            ClockBox.Size = new Size(550, 550);
+            ClockBox.TabIndex = 2;
+            ClockBox.TabStop = false;
+            // 
             // Clock
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 32);
             ClientSize = new Size(732, 703);
+            Controls.Add(ClockBox);
             Controls.Add(AuthorButton);
             Controls.Add(SettingsButton);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -85,7 +97,7 @@
             Name = "Clock";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Clock";
-            Load += Clock_Load;
+            ((System.ComponentModel.ISupportInitialize)ClockBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -95,5 +107,6 @@
         private Button AuthorButton;
         private ToolTip ClockToolTip;
         private System.Windows.Forms.Timer ClockTimer;
+        private PictureBox ClockBox;
     }
 }

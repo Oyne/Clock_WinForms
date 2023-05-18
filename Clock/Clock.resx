@@ -61,7 +61,7 @@
   <data name="SettingsButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAJ8dJREFUeF7t1ttyGzGyBdHz/z89hyN7ZIpKXnHbBWRGrAdXhNHVaD7o//7zn/9I
+        DAAACwwBP0AiyAAAJ8dJREFUeF7t1ttyGzGyBdHz/z89hyN7ZIpKXnHbBWRGrAdXhNHVaD7o//7zn/9I
         Wu+06A4kTYRDSVPYn+huJA2GQ0nD2OPoziQNgENJ3dl70R1K6giHkrqyz6K7lNQJDiV1YX2iu5XUCIeS
         mlnf6I4lNcChpCY2JrprSR/CoaSP2djoziV9AIeSPmJzoruX9CYcSnqbzY2+gaQ34FDSW2xN9C0kvQiH
         kl5ma6NvIukFOJT0EsuIvo2kJ3Ao6SWWEX0bSU/gUNJTlhV9I0kP4FDSU5YVfSNJD+BQ0kOWGX0rSXfg
@@ -256,6 +256,9 @@
   </data>
   <metadata name="ClockTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>162, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>79</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
