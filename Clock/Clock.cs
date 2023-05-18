@@ -10,6 +10,10 @@ namespace Clock
         Bitmap bmp;
         Graphics gr;
         Settings settings;
+        Settings default_settings;
+        bool use_custom_colors;
+
+
         readonly float Pic_Width, Pic_Height, CenterY, CenterX;
 
 
@@ -25,8 +29,9 @@ namespace Clock
             CenterY = Pic_Height / 2;
 
             author = new Author();
-            settingsMenu = new SettingsMenu();
+            default_settings = new Settings();
             settings = new Settings();
+            use_custom_colors = true;
 
             ClockTimer.Interval = 50;
             ClockTimer.Start();
@@ -39,7 +44,11 @@ namespace Clock
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
+            settingsMenu = new SettingsMenu(settings, use_custom_colors);
             settingsMenu.ShowDialog();
+
+            settings = settingsMenu.menu_settings;
+            use_custom_colors = settingsMenu.CustomColorCheckBox.Checked;
         }
 
         private void ClockTimer_Tick(object sender, EventArgs e)
@@ -58,17 +67,35 @@ namespace Clock
             Color digitalTextColor;
             Color digitalBorderColor;
 
+            // Time offset.
+            TimeSpan offset;
 
-            hrColor = settings.HourColor;
-            minColor = settings.MinuteColor;
-            secColor = settings.SecondColor;
-            circleColor = settings.BackgroundColor;
-            ticksColor = settings.TicksColor;
-            numColor = settings.NumColor;
-            digitalBackgroundColor = settings.DigitalBackgroudColor;
-            digitalTextColor = settings.DigitalTextColor;
-            digitalBorderColor = settings.DigitalBorderColor;
-
+            if (use_custom_colors)
+            {
+                hrColor = settings.HourColor;
+                minColor = settings.MinuteColor;
+                secColor = settings.SecondColor;
+                circleColor = settings.BackgroundColor;
+                ticksColor = settings.TicksColor;
+                numColor = settings.NumColor;
+                digitalBackgroundColor = settings.DigitalBackgroudColor;
+                digitalTextColor = settings.DigitalTextColor;
+                digitalBorderColor = settings.DigitalBorderColor;
+                offset = settings.Offset;
+            }
+            else
+            {
+                hrColor = default_settings.HourColor;
+                minColor = default_settings.MinuteColor;
+                secColor = default_settings.SecondColor;
+                circleColor = default_settings.BackgroundColor;
+                ticksColor = default_settings.TicksColor;
+                numColor = default_settings.NumColor;
+                digitalBackgroundColor = default_settings.DigitalBackgroudColor;
+                digitalTextColor = default_settings.DigitalTextColor;
+                digitalBorderColor = default_settings.DigitalBorderColor;
+                offset = default_settings.Offset;
+            }
 
             // Hand lengths.
             float hourLength = settings.HourLength;
@@ -89,19 +116,19 @@ namespace Clock
             // Digital border thicknesses
             float digitalBorderThickness = settings.DigitalBorderThickness;
 
-            // Time offset.
-            TimeSpan offset = settings.Offset;
-
+            // Calculating time
             DateTime dateTime = DateTime.UtcNow + offset;
 
             float hour = dateTime.Hour % 12 + (float)dateTime.Minute / 60; // convert 24hrs to 12hrs format
             float minute = dateTime.Minute + (float)dateTime.Second / 60;
             float sec = dateTime.Second + (float)dateTime.Millisecond / 1000;
 
+            // Calculating radians
             float hourRadian = (float)(hour * 360 / 12 * Math.PI / 180);
             float minRadian = (float)(minute * 360 / 60 * Math.PI / 180);
             float secRadian = (float)(sec * 360 / 60 * Math.PI / 180);
 
+            // Calculating start points
             float secStartPointX = (float)(secLength / 9 * System.Math.Sin(secRadian));
             float secStartPointY = (float)(secLength / 9 * System.Math.Cos(secRadian));
 
@@ -119,6 +146,10 @@ namespace Clock
 
             float hourEndPointX = (float)(hourLength * System.Math.Sin(hourRadian));
             float hourEndPointY = (float)(hourLength * System.Math.Cos(hourRadian));
+
+            // Calculate the position of the rectangle
+            float rectangleX = CenterX - (digitalClockLength / 2);
+            float rectangleY = CenterY + digitalClockHeight;
 
             gr.FillEllipse(new SolidBrush(circleColor), 0, 0, Pic_Width, Pic_Width);
 
@@ -156,11 +187,6 @@ namespace Clock
                       (float)((Pic_Width - temp) / 1.60F * System.Math.Cos(i * 6 * Math.PI / 180)));
                 }
             }
-
-
-            // Calculate the position of the rectangle
-            float rectangleX = CenterX - (digitalClockLength / 2);
-            float rectangleY = CenterY + digitalClockHeight;
 
             gr.FillRectangle(new SolidBrush(digitalBackgroundColor),
                 rectangleX,

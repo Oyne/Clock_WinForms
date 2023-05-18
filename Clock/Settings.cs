@@ -1,6 +1,6 @@
 ﻿namespace Clock
 {
-    class Settings
+    public class Settings
     {
         // Clock colors.
         public Color HourColor { get; set; } = Color.PaleGoldenrod;

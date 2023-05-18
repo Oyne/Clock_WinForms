@@ -29,345 +29,392 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsMenu));
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            numericUpDown1 = new NumericUpDown();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            DefaultSaveButton = new Button();
+            CustomSaveButton = new Button();
+            HourHandColorButton = new Button();
+            MinuteHandColorButton = new Button();
+            SecondHandColorButton = new Button();
+            BackgroundColorButton = new Button();
+            TicksBezelColorButton = new Button();
+            NumbersColorButton = new Button();
+            DigitalWatchBackgroundColorButton = new Button();
+            DigitalWatchTextColorButton = new Button();
+            DigitalWatchBorderColorButton = new Button();
+            OffsetUpDown = new NumericUpDown();
+            HourHandColorLabel = new Label();
+            MinuteHandColorLabel = new Label();
+            BackgroundColorLabel = new Label();
+            SecondHandColorLabel = new Label();
+            DigitalWatchTextColorLabel = new Label();
+            DigitalWatchBackgroundColorLabel = new Label();
+            NumbersColorLabel = new Label();
+            TicksBezelColorLabel = new Label();
+            OffsetLabel = new Label();
+            DigitalWatchBorderColorLabel = new Label();
+            CustomColorCheckBox = new CheckBox();
+            ((System.ComponentModel.ISupportInitialize)OffsetUpDown).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // DefaultSaveButton
             // 
-            button1.Location = new Point(12, 700);
-            button1.Name = "button1";
-            button1.Size = new Size(169, 72);
-            button1.TabIndex = 0;
-            button1.Text = "Save default settings";
-            button1.UseVisualStyleBackColor = true;
+            DefaultSaveButton.BackColor = Color.White;
+            DefaultSaveButton.FlatAppearance.BorderSize = 0;
+            DefaultSaveButton.FlatStyle = FlatStyle.Flat;
+            DefaultSaveButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            DefaultSaveButton.Location = new Point(304, 695);
+            DefaultSaveButton.Name = "DefaultSaveButton";
+            DefaultSaveButton.Size = new Size(241, 75);
+            DefaultSaveButton.TabIndex = 0;
+            DefaultSaveButton.Text = "Save default settings";
+            DefaultSaveButton.UseVisualStyleBackColor = false;
+            DefaultSaveButton.Click += DefaultSaveButton_Click;
             // 
-            // button2
+            // CustomSaveButton
             // 
-            button2.Location = new Point(375, 700);
-            button2.Name = "button2";
-            button2.Size = new Size(169, 72);
-            button2.TabIndex = 1;
-            button2.Text = "Save custom settings";
-            button2.UseVisualStyleBackColor = true;
+            CustomSaveButton.BackColor = Color.White;
+            CustomSaveButton.FlatAppearance.BorderSize = 0;
+            CustomSaveButton.FlatStyle = FlatStyle.Flat;
+            CustomSaveButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            CustomSaveButton.Location = new Point(18, 695);
+            CustomSaveButton.Name = "CustomSaveButton";
+            CustomSaveButton.Size = new Size(241, 75);
+            CustomSaveButton.TabIndex = 1;
+            CustomSaveButton.Text = "Save custom settings";
+            CustomSaveButton.UseVisualStyleBackColor = false;
+            CustomSaveButton.Click += CustomSaveButton_Click;
             // 
-            // button3
+            // HourHandColorButton
             // 
-            button3.BackColor = Color.White;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.Black;
-            button3.Location = new Point(375, 24);
-            button3.Name = "button3";
-            button3.Size = new Size(169, 29);
-            button3.TabIndex = 2;
-            button3.Text = "Select";
-            button3.UseVisualStyleBackColor = false;
+            HourHandColorButton.BackColor = Color.White;
+            HourHandColorButton.FlatAppearance.BorderSize = 0;
+            HourHandColorButton.FlatStyle = FlatStyle.Flat;
+            HourHandColorButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            HourHandColorButton.ForeColor = Color.Black;
+            HourHandColorButton.Location = new Point(375, 76);
+            HourHandColorButton.Name = "HourHandColorButton";
+            HourHandColorButton.Size = new Size(170, 35);
+            HourHandColorButton.TabIndex = 2;
+            HourHandColorButton.Text = "Select";
+            HourHandColorButton.UseVisualStyleBackColor = false;
+            HourHandColorButton.Click += HourHandColorButton_Click;
             // 
-            // button4
+            // MinuteHandColorButton
             // 
-            button4.BackColor = Color.White;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = Color.Black;
-            button4.Location = new Point(375, 92);
-            button4.Name = "button4";
-            button4.Size = new Size(169, 29);
-            button4.TabIndex = 3;
-            button4.Text = "Select";
-            button4.UseVisualStyleBackColor = false;
+            MinuteHandColorButton.BackColor = Color.White;
+            MinuteHandColorButton.FlatAppearance.BorderSize = 0;
+            MinuteHandColorButton.FlatStyle = FlatStyle.Flat;
+            MinuteHandColorButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            MinuteHandColorButton.ForeColor = Color.Black;
+            MinuteHandColorButton.Location = new Point(375, 139);
+            MinuteHandColorButton.Name = "MinuteHandColorButton";
+            MinuteHandColorButton.Size = new Size(170, 35);
+            MinuteHandColorButton.TabIndex = 3;
+            MinuteHandColorButton.Text = "Select";
+            MinuteHandColorButton.UseVisualStyleBackColor = false;
+            MinuteHandColorButton.Click += MinuteHandColorButton_Click;
             // 
-            // button5
+            // SecondHandColorButton
             // 
-            button5.BackColor = Color.White;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.Black;
-            button5.Location = new Point(375, 160);
-            button5.Name = "button5";
-            button5.Size = new Size(169, 29);
-            button5.TabIndex = 4;
-            button5.Text = "Select";
-            button5.UseVisualStyleBackColor = false;
+            SecondHandColorButton.BackColor = Color.White;
+            SecondHandColorButton.FlatAppearance.BorderSize = 0;
+            SecondHandColorButton.FlatStyle = FlatStyle.Flat;
+            SecondHandColorButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            SecondHandColorButton.ForeColor = Color.Black;
+            SecondHandColorButton.Location = new Point(375, 197);
+            SecondHandColorButton.Name = "SecondHandColorButton";
+            SecondHandColorButton.Size = new Size(170, 35);
+            SecondHandColorButton.TabIndex = 4;
+            SecondHandColorButton.Text = "Select";
+            SecondHandColorButton.UseVisualStyleBackColor = false;
+            SecondHandColorButton.Click += SecondHandColorButton_Click;
             // 
-            // button6
+            // BackgroundColorButton
             // 
-            button6.BackColor = Color.White;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.ForeColor = Color.Black;
-            button6.Location = new Point(375, 228);
-            button6.Name = "button6";
-            button6.Size = new Size(169, 29);
-            button6.TabIndex = 5;
-            button6.Text = "Select";
-            button6.UseVisualStyleBackColor = false;
+            BackgroundColorButton.BackColor = Color.White;
+            BackgroundColorButton.FlatAppearance.BorderSize = 0;
+            BackgroundColorButton.FlatStyle = FlatStyle.Flat;
+            BackgroundColorButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            BackgroundColorButton.ForeColor = Color.Black;
+            BackgroundColorButton.Location = new Point(375, 260);
+            BackgroundColorButton.Name = "BackgroundColorButton";
+            BackgroundColorButton.Size = new Size(170, 35);
+            BackgroundColorButton.TabIndex = 5;
+            BackgroundColorButton.Text = "Select";
+            BackgroundColorButton.UseVisualStyleBackColor = false;
+            BackgroundColorButton.Click += BackgroundColorButton_Click;
             // 
-            // button7
+            // TicksBezelColorButton
             // 
-            button7.BackColor = Color.White;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.ForeColor = Color.Black;
-            button7.Location = new Point(375, 296);
-            button7.Name = "button7";
-            button7.Size = new Size(169, 29);
-            button7.TabIndex = 6;
-            button7.Text = "Select";
-            button7.UseVisualStyleBackColor = false;
+            TicksBezelColorButton.BackColor = Color.White;
+            TicksBezelColorButton.FlatAppearance.BorderSize = 0;
+            TicksBezelColorButton.FlatStyle = FlatStyle.Flat;
+            TicksBezelColorButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            TicksBezelColorButton.ForeColor = Color.Black;
+            TicksBezelColorButton.Location = new Point(375, 323);
+            TicksBezelColorButton.Name = "TicksBezelColorButton";
+            TicksBezelColorButton.Size = new Size(170, 35);
+            TicksBezelColorButton.TabIndex = 6;
+            TicksBezelColorButton.Text = "Select";
+            TicksBezelColorButton.UseVisualStyleBackColor = false;
+            TicksBezelColorButton.Click += TicksBezelColorButton_Click;
             // 
-            // button8
+            // NumbersColorButton
             // 
-            button8.BackColor = Color.White;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.ForeColor = Color.Black;
-            button8.Location = new Point(375, 364);
-            button8.Name = "button8";
-            button8.Size = new Size(169, 29);
-            button8.TabIndex = 7;
-            button8.Text = "Select";
-            button8.UseVisualStyleBackColor = false;
+            NumbersColorButton.BackColor = Color.White;
+            NumbersColorButton.FlatAppearance.BorderSize = 0;
+            NumbersColorButton.FlatStyle = FlatStyle.Flat;
+            NumbersColorButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            NumbersColorButton.ForeColor = Color.Black;
+            NumbersColorButton.Location = new Point(375, 386);
+            NumbersColorButton.Name = "NumbersColorButton";
+            NumbersColorButton.Size = new Size(170, 35);
+            NumbersColorButton.TabIndex = 7;
+            NumbersColorButton.Text = "Select";
+            NumbersColorButton.UseVisualStyleBackColor = false;
+            NumbersColorButton.Click += NumbersColorButton_Click;
             // 
-            // button9
+            // DigitalWatchBackgroundColorButton
             // 
-            button9.BackColor = Color.White;
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.ForeColor = Color.Black;
-            button9.Location = new Point(375, 432);
-            button9.Name = "button9";
-            button9.Size = new Size(169, 29);
-            button9.TabIndex = 8;
-            button9.Text = "Select";
-            button9.UseVisualStyleBackColor = false;
+            DigitalWatchBackgroundColorButton.BackColor = Color.White;
+            DigitalWatchBackgroundColorButton.FlatAppearance.BorderSize = 0;
+            DigitalWatchBackgroundColorButton.FlatStyle = FlatStyle.Flat;
+            DigitalWatchBackgroundColorButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            DigitalWatchBackgroundColorButton.ForeColor = Color.Black;
+            DigitalWatchBackgroundColorButton.Location = new Point(375, 449);
+            DigitalWatchBackgroundColorButton.Name = "DigitalWatchBackgroundColorButton";
+            DigitalWatchBackgroundColorButton.Size = new Size(170, 35);
+            DigitalWatchBackgroundColorButton.TabIndex = 8;
+            DigitalWatchBackgroundColorButton.Text = "Select";
+            DigitalWatchBackgroundColorButton.UseVisualStyleBackColor = false;
+            DigitalWatchBackgroundColorButton.Click += DigitalWatchBackgroundColorButton_Click;
             // 
-            // button10
+            // DigitalWatchTextColorButton
             // 
-            button10.BackColor = Color.White;
-            button10.FlatAppearance.BorderSize = 0;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.ForeColor = Color.Black;
-            button10.Location = new Point(375, 500);
-            button10.Name = "button10";
-            button10.Size = new Size(169, 29);
-            button10.TabIndex = 9;
-            button10.Text = "Select";
-            button10.UseVisualStyleBackColor = false;
+            DigitalWatchTextColorButton.BackColor = Color.White;
+            DigitalWatchTextColorButton.FlatAppearance.BorderSize = 0;
+            DigitalWatchTextColorButton.FlatStyle = FlatStyle.Flat;
+            DigitalWatchTextColorButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            DigitalWatchTextColorButton.ForeColor = Color.Black;
+            DigitalWatchTextColorButton.Location = new Point(375, 512);
+            DigitalWatchTextColorButton.Name = "DigitalWatchTextColorButton";
+            DigitalWatchTextColorButton.Size = new Size(170, 35);
+            DigitalWatchTextColorButton.TabIndex = 9;
+            DigitalWatchTextColorButton.Text = "Select";
+            DigitalWatchTextColorButton.UseVisualStyleBackColor = false;
+            DigitalWatchTextColorButton.Click += DigitalWatchTextColorButton_Click;
             // 
-            // button11
+            // DigitalWatchBorderColorButton
             // 
-            button11.BackColor = Color.White;
-            button11.FlatAppearance.BorderSize = 0;
-            button11.FlatStyle = FlatStyle.Flat;
-            button11.ForeColor = Color.Black;
-            button11.Location = new Point(375, 568);
-            button11.Name = "button11";
-            button11.Size = new Size(169, 29);
-            button11.TabIndex = 10;
-            button11.Text = "Select";
-            button11.UseVisualStyleBackColor = false;
+            DigitalWatchBorderColorButton.BackColor = Color.White;
+            DigitalWatchBorderColorButton.FlatAppearance.BorderSize = 0;
+            DigitalWatchBorderColorButton.FlatStyle = FlatStyle.Flat;
+            DigitalWatchBorderColorButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            DigitalWatchBorderColorButton.ForeColor = Color.Black;
+            DigitalWatchBorderColorButton.Location = new Point(375, 575);
+            DigitalWatchBorderColorButton.Name = "DigitalWatchBorderColorButton";
+            DigitalWatchBorderColorButton.Size = new Size(170, 35);
+            DigitalWatchBorderColorButton.TabIndex = 10;
+            DigitalWatchBorderColorButton.Text = "Select";
+            DigitalWatchBorderColorButton.UseVisualStyleBackColor = false;
+            DigitalWatchBorderColorButton.Click += DigitalWatchBorderColorButton_Click;
             // 
-            // numericUpDown1
+            // OffsetUpDown
             // 
-            numericUpDown1.Location = new Point(375, 636);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(169, 27);
-            numericUpDown1.TabIndex = 11;
+            OffsetUpDown.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            OffsetUpDown.Location = new Point(375, 641);
+            OffsetUpDown.Maximum = new decimal(new int[] { 14, 0, 0, 0 });
+            OffsetUpDown.Minimum = new decimal(new int[] { 12, 0, 0, int.MinValue });
+            OffsetUpDown.Name = "OffsetUpDown";
+            OffsetUpDown.Size = new Size(170, 30);
+            OffsetUpDown.TabIndex = 11;
+            OffsetUpDown.ValueChanged += OffsetUpDown_ValueChanged;
             // 
-            // label1
+            // HourHandColorLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(12, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(190, 31);
-            label1.TabIndex = 12;
-            label1.Text = "Hour hand color";
+            HourHandColorLabel.AutoSize = true;
+            HourHandColorLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            HourHandColorLabel.ForeColor = Color.White;
+            HourHandColorLabel.Location = new Point(12, 75);
+            HourHandColorLabel.Name = "HourHandColorLabel";
+            HourHandColorLabel.Size = new Size(190, 31);
+            HourHandColorLabel.TabIndex = 12;
+            HourHandColorLabel.Text = "Hour hand color";
             // 
-            // label2
+            // MinuteHandColorLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 92);
-            label2.Name = "label2";
-            label2.Size = new Size(213, 31);
-            label2.TabIndex = 13;
-            label2.Text = "Minute hand color";
+            MinuteHandColorLabel.AutoSize = true;
+            MinuteHandColorLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            MinuteHandColorLabel.ForeColor = Color.White;
+            MinuteHandColorLabel.Location = new Point(12, 138);
+            MinuteHandColorLabel.Name = "MinuteHandColorLabel";
+            MinuteHandColorLabel.Size = new Size(213, 31);
+            MinuteHandColorLabel.TabIndex = 13;
+            MinuteHandColorLabel.Text = "Minute hand color";
             // 
-            // label3
+            // BackgroundColorLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(12, 228);
-            label3.Name = "label3";
-            label3.Size = new Size(205, 31);
-            label3.TabIndex = 15;
-            label3.Text = "Background color";
+            BackgroundColorLabel.AutoSize = true;
+            BackgroundColorLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            BackgroundColorLabel.ForeColor = Color.White;
+            BackgroundColorLabel.Location = new Point(12, 264);
+            BackgroundColorLabel.Name = "BackgroundColorLabel";
+            BackgroundColorLabel.Size = new Size(205, 31);
+            BackgroundColorLabel.TabIndex = 15;
+            BackgroundColorLabel.Text = "Background color";
             // 
-            // label4
+            // SecondHandColorLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(12, 160);
-            label4.Name = "label4";
-            label4.Size = new Size(213, 31);
-            label4.TabIndex = 14;
-            label4.Text = "Second hand color";
+            SecondHandColorLabel.AutoSize = true;
+            SecondHandColorLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            SecondHandColorLabel.ForeColor = Color.White;
+            SecondHandColorLabel.Location = new Point(12, 201);
+            SecondHandColorLabel.Name = "SecondHandColorLabel";
+            SecondHandColorLabel.Size = new Size(213, 31);
+            SecondHandColorLabel.TabIndex = 14;
+            SecondHandColorLabel.Text = "Second hand color";
             // 
-            // label5
+            // DigitalWatchTextColorLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(12, 498);
-            label5.Name = "label5";
-            label5.Size = new Size(267, 31);
-            label5.TabIndex = 19;
-            label5.Text = "Digital watch text color";
+            DigitalWatchTextColorLabel.AutoSize = true;
+            DigitalWatchTextColorLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            DigitalWatchTextColorLabel.ForeColor = Color.White;
+            DigitalWatchTextColorLabel.Location = new Point(12, 516);
+            DigitalWatchTextColorLabel.Name = "DigitalWatchTextColorLabel";
+            DigitalWatchTextColorLabel.Size = new Size(267, 31);
+            DigitalWatchTextColorLabel.TabIndex = 19;
+            DigitalWatchTextColorLabel.Text = "Digital watch text color";
             // 
-            // label6
+            // DigitalWatchBackgroundColorLabel
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(12, 432);
-            label6.Name = "label6";
-            label6.Size = new Size(353, 31);
-            label6.TabIndex = 18;
-            label6.Text = "Digital watch background color";
+            DigitalWatchBackgroundColorLabel.AutoSize = true;
+            DigitalWatchBackgroundColorLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            DigitalWatchBackgroundColorLabel.ForeColor = Color.White;
+            DigitalWatchBackgroundColorLabel.Location = new Point(12, 453);
+            DigitalWatchBackgroundColorLabel.Name = "DigitalWatchBackgroundColorLabel";
+            DigitalWatchBackgroundColorLabel.Size = new Size(353, 31);
+            DigitalWatchBackgroundColorLabel.TabIndex = 18;
+            DigitalWatchBackgroundColorLabel.Text = "Digital watch background color";
             // 
-            // label7
+            // NumbersColorLabel
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(12, 364);
-            label7.Name = "label7";
-            label7.Size = new Size(173, 31);
-            label7.TabIndex = 17;
-            label7.Text = "Numbers color";
+            NumbersColorLabel.AutoSize = true;
+            NumbersColorLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            NumbersColorLabel.ForeColor = Color.White;
+            NumbersColorLabel.Location = new Point(12, 390);
+            NumbersColorLabel.Name = "NumbersColorLabel";
+            NumbersColorLabel.Size = new Size(173, 31);
+            NumbersColorLabel.TabIndex = 17;
+            NumbersColorLabel.Text = "Numbers color";
             // 
-            // label8
+            // TicksBezelColorLabel
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(12, 296);
-            label8.Name = "label8";
-            label8.Size = new Size(237, 31);
-            label8.TabIndex = 16;
-            label8.Text = "Ticks and bezel color";
+            TicksBezelColorLabel.AutoSize = true;
+            TicksBezelColorLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            TicksBezelColorLabel.ForeColor = Color.White;
+            TicksBezelColorLabel.Location = new Point(12, 327);
+            TicksBezelColorLabel.Name = "TicksBezelColorLabel";
+            TicksBezelColorLabel.Size = new Size(237, 31);
+            TicksBezelColorLabel.TabIndex = 16;
+            TicksBezelColorLabel.Text = "Ticks and bezel color";
             // 
-            // label9
+            // OffsetLabel
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(12, 636);
-            label9.Name = "label9";
-            label9.Size = new Size(80, 31);
-            label9.TabIndex = 21;
-            label9.Text = "Offset";
+            OffsetLabel.AutoSize = true;
+            OffsetLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            OffsetLabel.ForeColor = Color.White;
+            OffsetLabel.Location = new Point(12, 640);
+            OffsetLabel.Name = "OffsetLabel";
+            OffsetLabel.Size = new Size(80, 31);
+            OffsetLabel.TabIndex = 21;
+            OffsetLabel.Text = "Offset";
             // 
-            // label10
+            // DigitalWatchBorderColorLabel
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = Color.White;
-            label10.Location = new Point(12, 568);
-            label10.Name = "label10";
-            label10.Size = new Size(296, 31);
-            label10.TabIndex = 20;
-            label10.Text = "Digital watch border color";
+            DigitalWatchBorderColorLabel.AutoSize = true;
+            DigitalWatchBorderColorLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            DigitalWatchBorderColorLabel.ForeColor = Color.White;
+            DigitalWatchBorderColorLabel.Location = new Point(12, 579);
+            DigitalWatchBorderColorLabel.Name = "DigitalWatchBorderColorLabel";
+            DigitalWatchBorderColorLabel.Size = new Size(296, 31);
+            DigitalWatchBorderColorLabel.TabIndex = 20;
+            DigitalWatchBorderColorLabel.Text = "Digital watch border color";
+            // 
+            // CustomColorCheckBox
+            // 
+            CustomColorCheckBox.AutoSize = true;
+            CustomColorCheckBox.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            CustomColorCheckBox.ForeColor = Color.White;
+            CustomColorCheckBox.Location = new Point(18, 12);
+            CustomColorCheckBox.Name = "CustomColorCheckBox";
+            CustomColorCheckBox.Size = new Size(231, 35);
+            CustomColorCheckBox.TabIndex = 22;
+            CustomColorCheckBox.Text = "Use custom colors";
+            CustomColorCheckBox.UseVisualStyleBackColor = true;
             // 
             // SettingsMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 32, 32);
-            ClientSize = new Size(591, 784);
-            Controls.Add(label9);
-            Controls.Add(label10);
-            Controls.Add(label5);
-            Controls.Add(label6);
-            Controls.Add(label7);
-            Controls.Add(label8);
-            Controls.Add(label3);
-            Controls.Add(label4);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(numericUpDown1);
-            Controls.Add(button11);
-            Controls.Add(button10);
-            Controls.Add(button9);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(559, 787);
+            Controls.Add(CustomColorCheckBox);
+            Controls.Add(OffsetLabel);
+            Controls.Add(DigitalWatchBorderColorLabel);
+            Controls.Add(DigitalWatchTextColorLabel);
+            Controls.Add(DigitalWatchBackgroundColorLabel);
+            Controls.Add(NumbersColorLabel);
+            Controls.Add(TicksBezelColorLabel);
+            Controls.Add(BackgroundColorLabel);
+            Controls.Add(SecondHandColorLabel);
+            Controls.Add(MinuteHandColorLabel);
+            Controls.Add(HourHandColorLabel);
+            Controls.Add(OffsetUpDown);
+            Controls.Add(DigitalWatchBorderColorButton);
+            Controls.Add(DigitalWatchTextColorButton);
+            Controls.Add(DigitalWatchBackgroundColorButton);
+            Controls.Add(NumbersColorButton);
+            Controls.Add(TicksBezelColorButton);
+            Controls.Add(BackgroundColorButton);
+            Controls.Add(SecondHandColorButton);
+            Controls.Add(MinuteHandColorButton);
+            Controls.Add(HourHandColorButton);
+            Controls.Add(CustomSaveButton);
+            Controls.Add(DefaultSaveButton);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "SettingsMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Settings Menu";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OffsetUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private NumericUpDown numericUpDown1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
+        private Button DefaultSaveButton;
+        private Button CustomSaveButton;
+        private Button HourHandColorButton;
+        private Button MinuteHandColorButton;
+        private Button SecondHandColorButton;
+        private Button BackgroundColorButton;
+        private Button TicksBezelColorButton;
+        private Button NumbersColorButton;
+        private Button DigitalWatchBackgroundColorButton;
+        private Button DigitalWatchTextColorButton;
+        private Button DigitalWatchBorderColorButton;
+        private NumericUpDown OffsetUpDown;
+        private Label HourHandColorLabel;
+        private Label MinuteHandColorLabel;
+        private Label BackgroundColorLabel;
+        private Label SecondHandColorLabel;
+        private Label DigitalWatchTextColorLabel;
+        private Label DigitalWatchBackgroundColorLabel;
+        private Label NumbersColorLabel;
+        private Label TicksBezelColorLabel;
+        private Label OffsetLabel;
+        private Label DigitalWatchBorderColorLabel;
+        public CheckBox CustomColorCheckBox;
     }
 }
