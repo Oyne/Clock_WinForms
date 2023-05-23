@@ -6,7 +6,7 @@ namespace Clock
     public partial class Clock : Form
     {
         Author author;
-        SettingsMenu settingsMenu;
+        SettingsMenu settings_menu;
         Bitmap bmp;
         Graphics gr;
         Settings settings;
@@ -44,11 +44,11 @@ namespace Clock
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            settingsMenu = new SettingsMenu(settings, use_custom_colors);
-            settingsMenu.ShowDialog();
+            settings_menu = new SettingsMenu(settings, use_custom_colors);
+            settings_menu.ShowDialog();
 
-            settings = settingsMenu.menu_settings;
-            use_custom_colors = settingsMenu.CustomColorCheckBox.Checked;
+            settings = settings_menu.menu_settings;
+            use_custom_colors = settings_menu.CustomColorCheckBox.Checked;
         }
 
         private void ClockTimer_Tick(object sender, EventArgs e)
